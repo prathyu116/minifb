@@ -1,5 +1,5 @@
 {
-  "name": "mern-stack-api",
+  "name": "mern-stack-FB",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,6 +7,10 @@
   "scripts": {
     "start": "nodemon src/server.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
