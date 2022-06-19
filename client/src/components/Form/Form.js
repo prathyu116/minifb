@@ -36,7 +36,7 @@ const Form = ({ currentId, setCurrentId }) => {
     if (!user?.result?.name) {
       return (
         <Paper className={classes.paper}>
-          <Typography variant="h6" align="center">
+          <Typography variant="h6" align="center" style={{fontFamily:"monospace"}}>
             Please Sign In to create your post.
           </Typography>
         </Paper>
