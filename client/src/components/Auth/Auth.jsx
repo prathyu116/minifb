@@ -6,15 +6,14 @@ import { GoogleLogin } from "react-google-login";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
 import Icon from "./icon";
-// import { signin, signup } from "../../actions/auth";
+import { signin, signup } from "../../actions/auth";
 // import { AUTH } from "../../constants/actionTypes";
 import useStyles from "./styles";
 import Input from "./Input";
 
-// const initialState = { firstName: "", lastName: "", email: "", password: "", confirmPassword: "" };
 
 const SignUp = () => {
-    // const [form, setForm] = useState(initialState);
+    const [form, setForm] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
   const [isSignup, setIsSignup] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -29,15 +28,15 @@ const SignUp = () => {
       setShowPassword(false);
     };
 
-    // const handleSubmit = (e) => {
-    //   e.preventDefault();
+    const handleSubmit = (e) => {
+      e.preventDefault();
 
-    //   if (isSignup) {
-    //     dispatch(signup(form, history));
-    //   } else {
-    //     dispatch(signin(form, history));
-    //   }
-    // };
+      if (isSignup) {
+        dispatch(signup(form, navigate));
+      } else {
+        dispatch(signin(form, navigate));
+      }
+    };
 
     const googleSuccess = async (res) => {
       const result = res?.profileObj;
@@ -54,9 +53,8 @@ const SignUp = () => {
 
   //   const googleError = () => alert("Google Sign In was unsuccessful. Try again later");
 
-  //   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const handleChange = () => {};
-  const handleSubmit = () => {};
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
   const googleError = (error) => {
     console.log(error);
     console.log("FAIL");

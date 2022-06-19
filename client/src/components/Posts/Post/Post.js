@@ -28,7 +28,7 @@ const Post = ({ post, setCurrentId }) => {
               src="https://cdn.vectorstock.com/i/1000x1000/23/81/default-avatar-profile-icon-vector-18942381.webp"
             />
           </div>
-          <Typography variant="h6">{post.creator}</Typography>
+          <Typography variant="h6">{post.name}</Typography>
         </div>
         <Typography variant="body2">{moment(post.createdAt).fromNow()}</Typography>
       </div>
