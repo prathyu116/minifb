@@ -23,7 +23,6 @@ const SignUp = () => {
   const handleShowPassword = () => setShowPassword(!showPassword);
 
     const switchMode = () => {
-    //   setForm(initialState);
       setIsSignup((prevIsSignup) => !prevIsSignup);
       setShowPassword(false);
     };
@@ -51,7 +50,6 @@ const SignUp = () => {
       }
     };
 
-  //   const googleError = () => alert("Google Sign In was unsuccessful. Try again later");
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
