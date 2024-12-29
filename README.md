@@ -1,4 +1,4 @@
-# minifb
+# mini social media app
 mini social media app build using Nodejs,Express,MongoDB,React(Redux),MaterialUI
 
 
